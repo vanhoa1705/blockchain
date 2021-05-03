@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HeaderModule } from '../header/header.module';
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [HomeComponent],
@@ -16,6 +17,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
     BrowserModule,
     HeaderModule,
     LeftMenuModule,
+    MatProgressSpinnerModule,
   ],
   exports: [HomeComponent],
 })

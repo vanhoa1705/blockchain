@@ -4,6 +4,43 @@
     <div class="col-lg-2 pl-0">
       <app-left-menu></app-left-menu>
     </div>
-    <div class="col-lg-10"></div>
+    <div class="col-lg-10">
+      <div class="d-flex justify-content-center" *ngIf="isLoading">
+        <mat-spinner></mat-spinner>
+      </div>
+      <div class="row" *ngIf="!isLoading">
+        <div class="col-lg-4 p-2">
+          <div class="card address">
+            <div class="card-body">
+              <h1 class="card-title">Address</h1>
+              <p class="card-text">
+                {{ address }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-2">
+          <div class="card balance">
+            <div class="card-body">
+              <h1 class="card-title">Balance</h1>
+              <p class="card-text">
+                {{ balance }}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 p-2">
+          <div class="card network">
+            <div class="card-body">
+              <h1 class="card-title">Network</h1>
+              <p class="card-text">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

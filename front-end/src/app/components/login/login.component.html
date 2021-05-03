@@ -23,20 +23,20 @@
             />
           </div>
 
-          <button id="Success" class="btn btn-primary btn-block" type="submit">
+          <button
+            id="Success"
+            class="btn btn-primary btn-block"
+            type="submit"
+            [disabled]="formLogin.value.privateKey.length != 64"
+            (click)="accessWallet()"
+          >
             Xác nhận
           </button>
 
-          <div class="text-center pt-3">
-            <span style="border-bottom: 0"> Forgot </span>
-
-            <a [routerLink]="['']" class="border-bottom-0"> Password? </a>
-          </div>
-
-          <div class="text-center">
-            <span> Create an account? </span>
-
-            <a [routerLink]="['']" class="border-bottom-0"> Sign up </a>
+          <div class="text-center pt-3 pointer">
+            <a class="border-bottom-0 create-wallet" (click)="createWallet()">
+              Create an wallet?
+            </a>
           </div>
         </form>
       </div>

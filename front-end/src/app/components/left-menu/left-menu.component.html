@@ -21,13 +21,13 @@
     data-toggle="list"
     role="tab"
     aria-controls="device"
-    [routerLink]="['/devices']"
+    [routerLink]="['/send']"
     [routerLinkActive]="['active']"
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <div>
-      <mat-icon>devices_other</mat-icon>
-      Device
+      <mat-icon>send</mat-icon>
+      Send
     </div>
   </button>
 
@@ -37,13 +37,13 @@
     data-toggle="list"
     role="tab"
     aria-controls="settings"
-    [routerLink]="['/profile']"
+    [routerLink]="['/pending-transaction']"
     [routerLinkActive]="['active']"
     [routerLinkActiveOptions]="{ exact: true }"
   >
     <div>
-      <mat-icon>person</mat-icon>
-      Profile
+      <mat-icon>view_list</mat-icon>
+      Pending transaction
     </div>
   </button>
 

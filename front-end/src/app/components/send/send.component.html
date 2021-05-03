@@ -1,0 +1,60 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2 pl-0">
+      <app-left-menu></app-left-menu>
+    </div>
+    <div class="col-lg-10">
+      <div>
+        <h1 class="mt-2">Send Transaction:</h1>
+        <h3 class="mb-4">Transfer some money to someone!</h3>
+      </div>
+      <div>
+        <form [formGroup]="formSend">
+          <div class="form-group">
+            <span>From address:</span>
+            <input
+              type="text"
+              class="form-control"
+              name="fromPublicKey"
+              id="fromPublicKey"
+              formControlName="fromPublicKey"
+              readonly
+            />
+          </div>
+          <div class="form-group">
+            <span>To address:</span>
+            <input
+              type="text"
+              class="form-control"
+              name="toPublicKey"
+              id="toPublicKey"
+              placeholder="To address"
+              formControlName="toPublicKey"
+            />
+          </div>
+          <div class="form-group">
+            <span>Amount:</span>
+            <input
+              type="text"
+              class="form-control"
+              name="amount"
+              id="amount"
+              placeholder="Amount"
+              formControlName="amount"
+            />
+          </div>
+
+          <button
+            id="Success"
+            class="btn btn-primary btn-block"
+            type="submit"
+            (click)="send()"
+          >
+            Sign & create transaction
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
