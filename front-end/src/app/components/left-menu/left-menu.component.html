@@ -1,0 +1,62 @@
+<nav class="list-group" id="left-menu">
+  <button
+    class="list-group-item list-group-item-action border-0 button-border mt-2"
+    id="list-home-list"
+    data-toggle="list"
+    role="tab"
+    aria-controls="home"
+    [routerLink]="['/home']"
+    [routerLinkActive]="['active']"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <div>
+      <mat-icon class="mb-0">home</mat-icon>
+      Home
+    </div>
+  </button>
+
+  <button
+    class="list-group-item list-group-item-action border-0 button-border mt-2"
+    id="list-device-list"
+    data-toggle="list"
+    role="tab"
+    aria-controls="device"
+    [routerLink]="['/devices']"
+    [routerLinkActive]="['active']"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <div>
+      <mat-icon>devices_other</mat-icon>
+      Device
+    </div>
+  </button>
+
+  <button
+    class="list-group-item list-group-item-action border-0 button-border mt-2"
+    id="list-settings-list"
+    data-toggle="list"
+    role="tab"
+    aria-controls="settings"
+    [routerLink]="['/profile']"
+    [routerLinkActive]="['active']"
+    [routerLinkActiveOptions]="{ exact: true }"
+  >
+    <div>
+      <mat-icon>person</mat-icon>
+      Profile
+    </div>
+  </button>
+
+  <button
+    class="list-group-item list-group-item-action border-0 button-border mt-2"
+    id="list-settings-list"
+    data-toggle="list"
+    role="tab"
+    aria-controls="settings"
+  >
+    <div>
+      <mat-icon>settings</mat-icon>
+      Settings
+    </div>
+  </button>
+</nav>

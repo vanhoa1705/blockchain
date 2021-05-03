@@ -1,0 +1,45 @@
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="limiter">
+    <div class="container-login">
+      <div class="card border-0">
+        <div class="d-flex justify-content-center" *ngIf="isLoading">
+          <mat-spinner></mat-spinner>
+        </div>
+        <form
+          [formGroup]="formLogin"
+          class="px-5 py-5 wrap-login shadow"
+          *ngIf="!isLoading"
+        >
+          <span class="login-text"> Xác nhận ví </span>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              name="privateKey"
+              id="privateKey"
+              placeholder="PrivateKey"
+              formControlName="privateKey"
+            />
+          </div>
+
+          <button id="Success" class="btn btn-primary btn-block" type="submit">
+            Xác nhận
+          </button>
+
+          <div class="text-center pt-3">
+            <span style="border-bottom: 0"> Forgot </span>
+
+            <a [routerLink]="['']" class="border-bottom-0"> Password? </a>
+          </div>
+
+          <div class="text-center">
+            <span> Create an account? </span>
+
+            <a [routerLink]="['']" class="border-bottom-0"> Sign up </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+#left-menu .button-border:not(.active):hover {
+  background-color: #e9ecef;
+}
+
+#left-menu .button-border {
+  border-radius: 0px 30px 30px 0px;
+  border: 1px solid transparent;
+}
+
+.active {
+  color: #1967d2;
+  background-color: #e8f0fe;
+}
+
+#left-menu {
+  font-size: 18px;
+  padding-top: 10px;
+}
