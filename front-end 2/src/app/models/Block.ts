@@ -1,4 +1,4 @@
-import * as crypto from "crypto";
+import * as crypto from 'crypto';
 
 export class Block {
   /**
@@ -13,7 +13,7 @@ export class Block {
   public nonce: number;
   public hash: string;
 
-  constructor(timestamp, transactions, previousHash = "") {
+  constructor(timestamp, transactions, previousHash = '') {
     this.previousHash = previousHash;
     this.timestamp = timestamp;
     this.transactions = transactions;
@@ -29,14 +29,14 @@ export class Block {
    */
   calculateHash() {
     return crypto
-      .createHash("sha256")
+      .createHash('sha256')
       .update(
         this.previousHash +
           this.timestamp +
           JSON.stringify(this.transactions) +
           this.nonce
       )
-      .digest("hex");
+      .digest('hex');
   }
 
   /**
@@ -47,13 +47,11 @@ export class Block {
    */
   mineBlock(difficulty: number) {
     while (
-      this.hash.substring(0, difficulty) !== Array(difficulty + 1).join("0")
+      this.hash.substring(0, difficulty) !== Array(difficulty + 1).join('0')
     ) {
       this.nonce++;
       this.hash = this.calculateHash();
     }
-
-    console.log(this.hash);
   }
 
   /**

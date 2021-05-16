@@ -1,0 +1,10 @@
+.scroll {
+  border: 1px solid silver;
+  padding: 5px 0px 5px 5px;
+  display: flex;
+  overflow-x: scroll;
+}
+
+.block :hover {
+  cursor: pointer;
+}

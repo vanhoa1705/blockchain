@@ -1,0 +1,49 @@
+<h2 mat-dialog-title>Device Report</h2>
+
+<div mat-dialog-content>
+  <form [formGroup]="createWalletForm">
+    <mat-form-field class="col-lg-12">
+      <span>Private Key:</span>
+      <input
+        type="text"
+        name="privateKey"
+        id="privateKey"
+        formControlName="privateKey"
+        readonly
+        matInput
+      />
+    </mat-form-field>
+    <mat-form-field class="col-lg-12">
+      <span>Public Key:</span>
+      <input
+        type="text"
+        name="publicKey"
+        id="publicKey"
+        formControlName="publicKey"
+        readonly
+        matInput
+      />
+    </mat-form-field>
+  </form>
+</div>
+
+<mat-dialog-actions class="d-flex flex-row-reverse mb-1">
+  <button mat-raised-button class="ml-2" (click)="close()">Close</button>
+  <button
+    mat-raised-button
+    color="primary"
+    class="ml-2"
+    *ngIf="!createWalletForm.valid"
+    (click)="createWallet()"
+  >
+    Create Wallet
+  </button>
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="saveWallet()"
+    *ngIf="createWalletForm.valid"
+  >
+    Save
+  </button>
+</mat-dialog-actions>
